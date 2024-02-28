@@ -1,0 +1,31 @@
+[
+  {
+    "src": "https://flowbite-svelte.com/images/carousel/cosmic-timetraveler-pYyOZ8q7AII-unsplash.webp",
+    "alt": "Description of Image 1"
+  },
+  
+  {
+    "src": "https://flowbite-svelte.com/images/carousel/johannes-plenio-RwHv7LgeC7s-unsplash.webp",
+    "alt": "Description of Image 1"
+  },
+  
+  {
+    "src": "https://flowbite-svelte.com/images/carousel/sergey-pesterev-tMvuB9se2uQ-unsplash.webp",
+    "alt": "Description of Image 1"
+  },
+  
+  {
+    "src": "https://flowbite-svelte.com/images/carousel/johannes-plenio-RwHv7LgeC7s-unsplash.webp",
+    "alt": "Description of Image 1"
+  },
+  
+  {
+    "src": "https://flowbite-svelte.com/images/carousel/pietro-de-grandi-T7K4aEPoGGk-unsplash.webp",
+    "alt": "Description of Image 1"
+  },
+  
+  {
+    "src": "https://flowbite-svelte.com/images/carousel/mark-harpur-K2s_YE031CA-unsplash.webp",
+    "alt": "Description of Image 1"
+  }
+]
