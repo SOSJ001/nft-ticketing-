@@ -37,7 +37,8 @@
 		</Search>
 	</div>
 </div>
-<div class="mx-auto flex flex-wrap items-center justify-center gap-3 py-4 md:py-8">
+<p class="text-2xl text-center">Events :</p>
+<div class="mx-auto flex flex-wrap items-center justify-center gap-3 pb-4 md:pb-8 md:pt-4">
 	<Button pill size="xl" color="yellow" outline>All categories</Button>
 	<Button pill size="xl" color="alternative">Hackathon</Button>
 	<Button pill size="xl" color="alternative">Breakpoint</Button>

@@ -1,16 +1,21 @@
-/* scroll bar style */
+/* Disable horizontal scrolling and enable vertical scrolling */
+html, body {
+  overflow-x: hidden; /* Hide horizontal scrollbar and disable horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+/* Custom scroll bar style */
 *::-webkit-scrollbar {
-    width: 3px;
-    background-color: #f5f5f5;
-  }
+  width: 3px;
+  background-color: #f5f5f5;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #ab5edf;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #ab5edf;
+}
 
-  *::-webkit-scrollbar-track {
-    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
-  }
-    /* scroll bar ends */
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
