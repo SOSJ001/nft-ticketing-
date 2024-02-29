@@ -1,6 +1,6 @@
 <script>
 	import { Gallery, Search } from 'flowbite-svelte';
-	import { Card, Button, Rating, Badge } from 'flowbite-svelte';
+	import { Card, Button } from 'flowbite-svelte';
 	import TxnButton from './txn-button.svelte';
 	const images = [
 		{
