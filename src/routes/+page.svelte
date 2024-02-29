@@ -12,8 +12,11 @@
 		Connection,
 		Keypair
 	} from '@solana/web3.js';
-	import { ButtonGroup, Button } from 'flowbite-svelte';
+	import { Button } from 'flowbite-svelte';
 	import Hero from '$lib/hero.svelte';
+	import Event from '../lib/event.svelte';
+	import Buttontxn from '../lib/buttontxn.svelte';
+	import Footer from '../lib/footer.svelte';
 	let signature: TransactionSignature = '';
 	const { connection } = $workSpace;
 	const publicKey = $walletStore.publicKey as PublicKey;
@@ -21,7 +24,7 @@
 	let balance = 0;
 
 	async function onClick() {
-		balance++
+		balance++;
 
 		let transaction = new Transaction();
 		const recipientPubKey = new PublicKey('3ZPcjHB48wwrHmpj1pMkH3ohbEaajpTVHZJuAw4TwVzL');
@@ -48,17 +51,18 @@
 	}
 </script>
 
-
-<div class="dark:text-white text-black">
+<div class="text-black dark:text-white">
 	{#if $walletStore.connected}
-		<div class="flex-col">
-			<div>
-				<Hero/>
+		<div class="flex-col space-y-5">
+			<div class="">
+				<Hero />
+			</div>
+			<div class="px-5">
+				<Event>
+					<Button on:click={onClick} outline color="yellow">Buy now</Button>
+				</Event>
 			</div>
 
-			<ButtonGroup>
-				<Button on:click={onClick} outline color="yellow">Send Sol</Button>
-			</ButtonGroup>
 			<div class="text-white">
 				Your balance is {balance}
 			</div>
@@ -67,3 +71,4 @@
 		your wallet is not Connected
 	{/if}
 </div>
+

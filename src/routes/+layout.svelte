@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.pcss';
+	import '$lib/global.css';
 
 	import { onMount } from 'svelte';
 	import * as web3 from '@solana/web3.js';
@@ -22,6 +23,7 @@
 		DropdownDivider,
 		DarkMode
 	} from 'flowbite-svelte';
+	import Footer from '../lib/footer.svelte';
 
 	const localStorageKey = 'walletAdapter';
 	const network = web3.clusterApiUrl('devnet'); // localhost or mainnet
@@ -51,38 +53,20 @@
 
 <WalletProvider {localStorageKey} {wallets} autoConnect />
 <ConnectionProvider {network} />
-<div class="w-screen flex-col items-center justify-center">
+<div class="h-full w-screen flex-col items-center justify-center">
 	<Navbar>
 		<NavBrand href="/">
-			<img
-				src="/images/flowbite-svelte-icon-logo.svg"
-				class="me-3 h-6 sm:h-9"
-				alt="Flowbite Logo"
-			/>
-			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
-				>Flowbite</span
-			>
+			<a href="/" class="font-extrabold text-white">SOS SEATS</a>
 		</NavBrand>
 		<div class="flex items-center space-x-2 md:order-2">
 			<WalletMultiButton />
 			<NavHamburger class1="w-full md:flex md:w-auto md:order-1" />
 			<DarkMode />
 		</div>
-		<Dropdown placement="bottom" triggeredBy="#avatar-menu">
-			<DropdownHeader>
-				<span class="block text-sm">Bonnie Green</span>
-				<span class="block truncate text-sm font-medium">name@flowbite.com</span>
-			</DropdownHeader>
-			<DropdownItem>Dashboard</DropdownItem>
-			<DropdownItem>Settings</DropdownItem>
-			<DropdownItem>Earnings</DropdownItem>
-			<DropdownDivider />
-			<DropdownItem>Sign out</DropdownItem>
-		</Dropdown>
 		<NavUl>
 			<NavLi href="/" active={true}>Home</NavLi>
+			<NavLi href="/dashboard">Dashboad</NavLi>
 			<NavLi href="/about">About</NavLi>
-			<NavLi href="/docs/components/navbar">Navbar</NavLi>
 			<NavLi href="/pricing">Pricing</NavLi>
 			<NavLi href="/contact">Contact</NavLi>
 		</NavUl>
@@ -90,4 +74,5 @@
 	<div class="w-screen flex-col">
 		<slot />
 	</div>
+	<Footer/>
 </div>
