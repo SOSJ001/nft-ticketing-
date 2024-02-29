@@ -2,6 +2,8 @@
 	import { Tabs, TabItem } from 'flowbite-svelte';
 	import CreateEvent from '../../lib/create-event.svelte';
 	import Attending from '../../lib/attending.svelte';
+	import MyPortfolio from '../../lib/my-portfolio.svelte';
+	import History from '../../lib/history.svelte';
 </script>
 
 <Tabs
@@ -10,8 +12,9 @@
 >
 	<TabItem class="w-full" open activeClasses="text-white border-2 w-full h-full">
 		<span slot="title">MY PORTFOLIO</span>
-		<div class=" flex items-center justify-center">
+		<div class=" items-center justify-center">
 			<!-- <MyPortfolio /> -->
+			<MyPortfolio/>
 		</div>
 	</TabItem>
 	<TabItem class="w-full" activeClasses="text-white border-2 w-full h-full">
@@ -29,12 +32,9 @@
 		</div>
 	</TabItem>
 	<TabItem class="w-full" activeClasses="text-white border-2 w-full h-full ">
+		<!-- history -->
 		<span slot="title">HISTORY</span>
-		<p class="text-sm text-gray-500 dark:text-gray-400">
-			<b>Settings:</b>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua.
-		</p>
+		<History/>
 	</TabItem>
 	<TabItem class="w-full" activeClasses="text-white border-2 w-full h-full">
 		<span slot="title">POINTS</span>
