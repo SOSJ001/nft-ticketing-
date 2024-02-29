@@ -63,9 +63,9 @@
 				</Event>
 			</div>
 
-			<div class="text-white">
+			<!-- <div class="text-white">
 				Your balance is {balance}
-			</div>
+			</div> -->
 		</div>
 	{:else}
 		your wallet is not Connected
