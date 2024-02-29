@@ -4,6 +4,7 @@
 	import Attending from '../../lib/attending.svelte';
 	import MyPortfolio from '../../lib/my-portfolio.svelte';
 	import History from '../../lib/history.svelte';
+	import Point from '../../lib/point.svelte';
 </script>
 
 <Tabs
@@ -14,14 +15,14 @@
 		<span slot="title">MY PORTFOLIO</span>
 		<div class=" items-center justify-center">
 			<!-- <MyPortfolio /> -->
-			<MyPortfolio/>
+			<MyPortfolio />
 		</div>
 	</TabItem>
 	<TabItem class="w-full" activeClasses="text-white border-2 w-full h-full">
 		<!-- Attending -->
 		<span slot="title">ATTENDING</span>
 		<div class=" flex items-center justify-center">
-			<Attending/>
+			<Attending />
 		</div>
 	</TabItem>
 	<TabItem class="w-full" activeClasses="text-white border-2 w-full h-full">
@@ -34,14 +35,11 @@
 	<TabItem class="w-full" activeClasses="text-white border-2 w-full h-full ">
 		<!-- history -->
 		<span slot="title">HISTORY</span>
-		<History/>
+		<History />
 	</TabItem>
 	<TabItem class="w-full" activeClasses="text-white border-2 w-full h-full">
+		<!-- Points -->
 		<span slot="title">POINTS</span>
-		<p class="text-sm text-gray-500 dark:text-gray-400">
-			<b>Users:</b>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-			et dolore magna aliqua.
-		</p>
+		<Point />
 	</TabItem>
 </Tabs>
