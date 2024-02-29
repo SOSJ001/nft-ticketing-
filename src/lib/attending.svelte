@@ -1,6 +1,7 @@
 <script>
 	import { Gallery, Search } from 'flowbite-svelte';
 	import { Card, Button, Rating, Badge } from 'flowbite-svelte';
+	import TxnButton from './txn-button.svelte';
 	const images = [
 		{
 			alt: 'shoes',
@@ -79,14 +80,15 @@
 								Christex Foundation Sport
 							</h5>
 						</a>
-						<Rating rating="4" size="24" class="mb-5 mt-2.5">
-							<Badge slot="text" class="ms-3">4</Badge>
-						</Rating>
+						<p class="mb-3 font-normal leading-tight text-gray-700 dark:text-gray-400">
+							Description: Lorem Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.s
+							accusantium iste. Quis..
+						</p>
 						<div class="flex items-center justify-between">
 							<span class="text-3xl font-bold text-gray-900 dark:text-white"
 								>{`${item.price} Sol`}</span
 							>
-							<Button outline color="yellow">Sell</Button>
+							<TxnButton>Sell</TxnButton>
 							<Button color="alternative">Share Link</Button>
 						</div>
 					</div>
